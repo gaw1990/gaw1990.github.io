@@ -1,0 +1,57 @@
+body {
+	background-color: #395A91;
+}
+
+header {
+	border: solid #20273F 1px;
+	padding: 1em;
+	background-color: #e2e1ea;
+	/*text-transform: uppercase;*/
+}
+
+header nav {
+	float: right;
+}
+
+header nav a {
+	padding: 1em;
+	color: #20273F;
+	text-decoration: none;
+	}
+
+header nav a:hover {
+	background-color: #B3C5E3;
+}
+
+.email {
+	padding: 1em;
+	color: #20273F;
+	text-decoration: none;
+}
+
+.jumbotron {
+	width: 250px;
+	height: 250px;
+	border-radius: 150px;
+	background: url("../imgs/rudy.jpg") center no-repeat;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+}
+
+.jumbotron h1 {
+	position: relative;
+	left: 15em;
+	top: 3em;
+	color: white;
+
+}
+
+article {
+	padding: 2em;
+	border: solid black 1px;
+	background-color: #B3C5E3;
+}
+
+
+
+
+
