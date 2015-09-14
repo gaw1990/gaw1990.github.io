@@ -1,0 +1,21 @@
+Hashes and Arrays
+
+An Array: A collection of objects indexed as [key] and [value] pairs where the keys are integers starting at [0] and increasing incrementally by 1 and the values are assignable.
+
+IMG NUMBERED STRINGS
+
+Values can be accessed easily by their keys: (Eg. hash1(0) will return "hello", hash1(1) #=> "world") 
+
+Arrays are the simplest and most efficient data structure in ruby. They can be used to store strings, integers, floats and booleans:
+
+IMG ARRAY EXAMPLES
+
+Adding, subtracting or moving data in arrays is fast and efficient becayse the keys in the [key]=[value] pairs are fixed. Having a strict key set allows for easier data manipulation and navigation. Arrays a popular collection structure in ruby because of this.
+
+Arrays have many benefits, but what if the data is all strings or string+boolean combonations and can't be indexed by number. (eg. "name" = "george" or "male" = "true")
+
+
+
+-Arrays are ordered lists, so while it's easier to input data into a hash, it's much harder to get that data out in an organized fashion. 
+
+-Hashes on the other hand can create more detailed and complex data structures. Plus the ability to create hashes within hashes simulates 3D data structures. 
