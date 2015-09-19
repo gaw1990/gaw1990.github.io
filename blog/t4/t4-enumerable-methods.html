@@ -1,0 +1,60 @@
+
+<!Doctype html>
+<html>
+<head>
+</head>
+<body>
+
+	<article>
+
+		<h3>Fun with mixins modules and ".map"</h3>
+
+		
+		<p>There are a series of methods (like .sort and .group_by) that iterate over arrays using the enumerable mixin module. A module is a block of code that can be called from any class regardless of that class&#8217;s inheritance.</p>
+
+		<p>In Ruby, classes have what&#8217;s called &quot;single inheritance&quot; meaning that they can only inherit behavior from one other class. Modules let us bring reusable blocks of code into a class from outside the direct inheritance structure. Another name for a module we bring into a class or method is a &quot;mix-in&quot; named because we&#8217;re mixing in code from outside of inheritance.</p>
+
+		<p>&quot;.map&quot; is a method that iterates over each item in an array and returns a modified array.  &quot;.map&quot; lives in the &quot;enumerable&quot; module, which is essentially a bunch of methods packaged together into a module that we can mix-in and use without having to define the method every time we want to use it. Enumerable methods include many methods that let us iterate through collections like &quot;.each&quot; and &quot;.select&quot;.</p>
+
+		<p>The method &quot;.map&quot; works like this:</p>
+
+		<blockquote>some_array = [1, 2, 3, 4, 5]</blockquote>
+
+		<blockquote>some_array.map { |array_item|
+			array_item + 1
+			}</blockquote>
+
+		<blockquote>#=> &quot;[2, 3, 4, 5, 6]&quot;</blockquote>
+
+		<p>In this case it took every array item and added one to it. It returns a modified array, but it doesn&#8217;t actually alter the original array. In other words it&#8217;s a non-destructive method, so if we call:</p>
+
+		<blockquote>some_array
+		#=> [1, 2, 3, 4, 5] </blockquote>
+
+		<p>We can see it hasn&#8217;t been permanently changed. </p>
+
+		<p>If we **DO** want to permanently change the array, we can add a &quot;bang&quot; onto the method and we get the method &quot;.map!&quot;.</p>
+
+		<blockquote>some_array = [1, 2, 3, 4, 5]</blockquote>
+
+		<blockquote>some_array.map! { |array_item|  # using .map! not .map
+			array_item + 1
+			}</blockquote>
+
+		<blockquote>#=> &quot;[2, 3, 4, 5, 6]&quot;</blockquote>
+
+		<p>We&#8217;ll get the same return with &quot;.map!&quot; as we did with &quot;.map&quot;, but now if we call some_array again we&#8217;ll get:</p>
+
+		<blockquote>some_array
+		#=> [2, 3, 4, 5, 6]</blockquote>
+
+		<p>some_array has been permanently altered.</p>
+
+	</article>
+
+</body>
+</html>
+
+
+
+
