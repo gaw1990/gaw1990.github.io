@@ -1,5 +1,6 @@
 body {
-	background: url("../imgs/colorado.jpg") center;*/
+	background-color: white;
+	background: url("../imgs/colorado.jpg") center;
 	/*background: url("../imgs/chicago.jpg") center center;*/
 	font-family: sans-serif;
 }
@@ -55,7 +56,7 @@ header nav a:hover {
 }
 
 .projects {
-	background-color: white;
+	background-color: #e2e1ea;
     opacity: 0.90;
     margin-top: 5em;
     color: black;
