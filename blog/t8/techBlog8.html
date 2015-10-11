@@ -1,0 +1,61 @@
+<article>
+
+	<h1>Understanding Encryption with Ruby!!</h1>
+	<h3>Or as we know it: twda (2-shift)</h3>
+
+	<p>In this blog post I'm going to write a bit about encryption. Encryption is a topic I've invested significant time researching outside of my DBC coursework, and I think anyone who wants to keep their information safe could benefit from knowing a little more about how data encryption works.</p>
+
+	<p>To borrow a definition from <a href="https://en.wikipedia.org/wiki/Encryption">Wikipedia(Encryption)</a>:</p>
+
+	<blockquote>Encryption is the process of encoding messages or information in such a way that only authorized parties can read it. In an encryption scheme, the intended communication information or message, referred to as plaintext, is encrypted using an encryption algorithm, generating ciphertext that can only be read if decrypted.</blockquote>
+	
+	<p>For example, in the title of this article I put "twda", which would be an example of "cyphertext" or an encrypted message. In this case, the "plaintext" or original message is the word "ruby". </p>
+
+	<p>How do we get "twda" from "ruby"? We used one of the oldest and simplest forms of encryption called a <a href="http://practicalcryptography.com/ciphers/caesar-cipher/">"caesar cypher"</a>(It was a favorite of the roman emperor Caesar). It involves taking each individual character in a string and shifting it down in the alphabet a certain number of times. So in a shift 2: </p>
+
+	<blockquote>"a" -> "c"</blockquote>
+	<blockquote>"b" -> "d"</blockquote>
+	<blockquote>"c" -> "e"</blockquote>
+	<blockquote>ect...</blockquote>
+
+	<p>For "twda"->"ruby", the encryption process would look like this:</p>
+
+	<blockquote>"r" -> "s" -> "t"</blockquote>
+	<blockquote>"u" -> "v" -> "w"</blockquote>
+	<blockquote>"b" -> "c" -> "d"</blockquote>
+	<blockquote>"y" -> "z" -> "a"</blockquote>
+
+	<p>I wrote a little Ruby snippet for caesar cyphers that lets you encrypt and descrypt messages <a href=</p>
+
+	<p>A caesar cypher might be effective for one word, or passing notes in class, but it's no where near secure. If you had the time (or the code) you could print out each of the 25 shift possiblities and see which one is plain english.</p>
+
+	<p>There are also other methods to decrypt substitution codes (codes in which every letter "y" is subtituted with letter or number "x"). One interesting method uses the frequencies of letter occurance in the english language("e" represents on average 13% of characters, where "z" represents less than 1%) to figure out which characters represent which. <a href= "http://practicalcryptography.com/cryptanalysis/stochastic-searching/cryptanalysis-caesar-cipher/">(more info on substitution cryptanalysis)</a></p>
+
+	<p>Also consider the modern security climate:</p>
+	<p>If I were an american spy in Great Britain who wanted to send a message back to Barak Obama, I would have to send the ecrypted message "twda" and the shift "shift-2" so that he would know how to decode the message when he got it.</p>
+
+	<blockquote>Ideally:</blockquote>
+	<blockquote>Secret message + key--->-------The internet--->----->Barak Obama</blockquote>
+
+	<blockquote>More likely:</blockquote>
+	<blockquote>Secret message + key--->---(local eavsdropper)--->----(isp collection)------> Barak Obama</blockquote>
+
+	<p>The eavsdropper could be a neighbor who figured out my wifi password, or someone who tampered with public wifi. As we found out from various government leaks, the US government has the ability to access all out of country internet traffic and even american to american traffic if there's suspicion. (In GB it's even stricter, their government has full access to all internet traffic)</p>
+
+	<p>No matter how good your spy encryption is, you have to tell Obama which code you're using so he can decrypt the code himself. The problem: Whatever code + key you send to obama, the eavsdropper will have as well.</p>
+	
+
+	<p></p>
+
+	
+
+<pre><code></code></pre>	
+
+
+
+<!-- 	<img height="50%" width="90%" src="caesar_encrypt.png" alt="nested content" />
+	<img height="50%" width="90%" src="caesar_decrypt.png" alt="nested content" />
+ -->
+
+
+</article>

@@ -1,0 +1,8 @@
+"Where is public key crypto really needed?"
+  - "It is the case that there is relatively little need for
+     asymmetric key cryptography in small closed populations.
+     For example, the banks get along quite well without.  The
+     advantage of public key is that it permits private
+     communication in a large and open population and with a
+     minimum of prearrangement." [WHMurray, sci.crypt, 1994-08-
+     25]
