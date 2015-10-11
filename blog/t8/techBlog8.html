@@ -25,9 +25,9 @@
 	<blockquote>"b" -> "c" -> "d"</blockquote>
 	<blockquote>"y" -> "z" -> "a"</blockquote>
 
-	<p>I wrote a little Ruby snippet for caesar cyphers that lets you encrypt and descrypt messages <a href=</p>
+	<p>I wrote a <a href="https://github.com/gaw1990/gaw1990.github.io/blob/master/blog/t8/caesar-cypher-ruby.rb">little Ruby snippet</a> for caesar cyphers that lets you encrypt and descrypt messages for those interested. </p>
 
-	<p>A caesar cypher might be effective for one word, or passing notes in class, but it's no where near secure. If you had the time (or the code) you could print out each of the 25 shift possiblities and see which one is plain english.</p>
+	<p>While a caesar cypher might be effective for one word, or passing notes in class, but it's no where near secure. If you had the time (or the code) you could print out each of the 25 shift possiblities and see which one is plain english.</p>
 
 	<p>There are also other methods to decrypt substitution codes (codes in which every letter "y" is subtituted with letter or number "x"). One interesting method uses the frequencies of letter occurance in the english language("e" represents on average 13% of characters, where "z" represents less than 1%) to figure out which characters represent which. <a href= "http://practicalcryptography.com/cryptanalysis/stochastic-searching/cryptanalysis-caesar-cipher/">(more info on substitution cryptanalysis)</a></p>
 
@@ -35,21 +35,42 @@
 	<p>If I were an american spy in Great Britain who wanted to send a message back to Barak Obama, I would have to send the ecrypted message "twda" and the shift "shift-2" so that he would know how to decode the message when he got it.</p>
 
 	<blockquote>Ideally:</blockquote>
-	<blockquote>Secret message + key--->-------The internet--->----->Barak Obama</blockquote>
+	<blockquote>Secret message + key--->-------The internet--->-------->Barak Obama</blockquote>
 
 	<blockquote>More likely:</blockquote>
-	<blockquote>Secret message + key--->---(local eavsdropper)--->----(isp collection)------> Barak Obama</blockquote>
+	<blockquote>Secret message + key--->-----(local eavsdropper)--->----(isp collection)------> Barak Obama</blockquote>
 
-	<p>The eavsdropper could be a neighbor who figured out my wifi password, or someone who tampered with public wifi. As we found out from various government leaks, the US government has the ability to access all out of country internet traffic and even american to american traffic if there's suspicion. (In GB it's even stricter, their government has full access to all internet traffic)</p>
+	<p>The local eavsdropper could be a neighbor who figured out my wifi password, or someone who tampered with public wifi. As we found out from various government leaks, most major governments have the ability to access all out-of-country internet traffic and even citizen-to-citizen traffic if there's suspicion. (In Great Britain it's even stricter, the government has full access to all internet traffic)</p>
 
 	<p>No matter how good your spy encryption is, you have to tell Obama which code you're using so he can decrypt the code himself. The problem: Whatever code + key you send to obama, the eavsdropper will have as well.</p>
 	
 
-	<p></p>
+	<p>There are ways around this problem, like distributing keys in advance then changing them daily. This eliminates the need to transmit a key with a message and improves security.</p>
 
-	
+	<p>But what if you just decided to buy a new jacket online and you didn't set up a key schedule with GAP? That's where something called "Strong Public Key Encryption" comes in.</p>
 
-<pre><code></code></pre>	
+	<p>-----------------------------------------------------</p>
+
+	<p>If you were to open up your "Keychain Access" app in OS X and look through your certificates, you'd see lots of RSA-1024s or RSA-2048s. These are RSA encryption methods, which are the modern standard of encryption. </p>
+
+	<p>The public key(which anyone can see) is based on a private key(which only the person who initiated the communication knows). This allows for an individual with a private key and the encrypted message to quickly decrypt a message, but for an individual with only the public key and encrypted message, decryption with even with the most powerful computers on earth would take an incredibly long time. </p>
+
+	<p>RSA achieves security by relying on the difficulty of factoring extremely large prime numbers and allows for private communication with a minimum of prearrangement. RSA also allows for the interception of both the public key and the encrypted message without reasonable possiblity of decryption. </p>
+
+	<blockquote>Here's an example of a RSA-2048 Number:</blockquote>
+	<blockquote>
+		   2519590847565789349402718324004839857142928212620403202777713783604366202070
+           7595556264018525880784406918290641249515082189298559149176184502808489120072
+           8449926873928072877767359714183472702618963750149718246911650776133798590957
+           0009733045974880842840179742910064245869181719511874612151517265463228221686
+           9987549182422433637259085141865462043576798423387184774447920739934236584823
+           8242811981638150106748104516603773060562016196762561338441436038339044149526
+           3443219011465754445417842402092461651572335077870774981712577246796292638635
+           6373289912154831438167899885040445364023527381951378636564391212010397122822
+           120720357
+    </blockquote>
+
+    <p>In order to break an encryption made with this number, you'd have to factor it. (There's currently a 200k prize for the first person to decrypt an RSA-2048 number and many beleive it wont happen for years). So you can rest assured (discounting consipracy theories that the NSA can crack RSA-2048 or that there's a built in backdoor) that your data is safe. </p>
 
 
 
