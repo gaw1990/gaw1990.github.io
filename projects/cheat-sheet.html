@@ -1,0 +1,167 @@
+<!Doctype html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+	<title>George Wambold's Blog</title>
+
+</head>
+
+<body>
+<header>
+	<a class="email" href="mailto:georgewambold@gmail.com">GeorgeWambold@gmail.com</a>	
+
+	<nav>
+		<a href="http://gaw1990.github.io/index">Home</a>
+		<a href="http://gaw1990.github.io/about/about">About</a>
+		<a href="http://gaw1990.github.io/blog/blog">Blog</a>
+		<a href="#">Contact</a>
+	</nav>
+</header>
+
+<div class="jumbotron">
+
+	<h1>George's Projects</h1>
+
+</div>
+<article>
+<h1>Basic SQL Cheat Sheet</h1>
+
+<div class="sqlcheat">
+<h4>UPDATE</h4>
+<blockquote>-edits a row in a table</blockquote>
+<h4>Syntax</h4>
+<blockquote>UPDATE table_name</blockquote>
+<blockquote>SET column1 = value1, column2 = value2, ect...</blockquote>
+<blockquote>WHERE some_column = some_value;</blockquote>
+<h4>Example</h4>
+<blockquote>UPDATE customers</blockquote>
+<blockquote>SET name = "George", city = "chicago", country = "USA"</blockquote>
+<blockquote>WHERE name = "George";</blockquote>
+<h4>Notes</h4>
+<blockquote>Using WHERE is important so you don't edit every row in the database</blockquote>
+</div>
+
+<div class="sqlcheat">
+<h4>ALTER TABLE</h4>
+<blockquote>-cahnges an existing table</blockquote>
+<h4>Syntax</h4>
+<blockquote>ALTER TABLE table_name</blockquote>
+<blockquote>ADD column_name datatype;</blockquote>
+<h4>Example</h4>
+<blockquote>ALTER TABLE customers</blockquote>
+<blockquote>ADD birthday date;</blockquote>
+<h4>Notes</h4>
+<blockquote>In place of 'ADD' you can use many different commands including 'MODIFY' to change an existing column, 'DROP' to drop an existing column or 'RENAME' to rename an existing column</blockquote>
+</div>
+
+<div class="sqlcheat">
+<h4>DELETE FROM</h4>
+<blockquote>-deletes a row from a table</blockquote>
+<h4>Syntax</h4>
+<blockquote>DELETE FROM table_name</blockquote>
+<blockquote>WHERE some_column = some_value;</blockquote>
+<h4>Example</h4>
+<blockquote>DELETE FROM customers</blockquote>
+<blockquote>WHERE name = 'George" AND name = 'Richard';</blockquote>
+</div>
+
+<div class="sqlcheat">
+<h4>SELECT DISTINCT</h4>
+<blockquote>-used to return unique values in the result set-- it filters out duplicate values</blockquote>
+<h4>Syntax</h4>
+<blockquote>SELECT DISTINCT column_name FROM table_name;</blockquote>
+<h4>Example</h4>
+<blockquote>SELECT DISTINCT genre FROM movies;</blockquote>
+<blockquote>(this would list each genre in movies exactly once.)</blockquote>
+<h4>Notes</h4>
+<blockquote></blockquote>
+</div>
+
+<div class="sqlcheat">
+<h4>WHERE</h4>
+<blockquote>-used to filter queries</blockquote>
+<h4>Syntax/Example</h4>
+<blockquote>SELECT * FROM movies</blockquote>
+<blockquote>WHERE imdb_rating > 8;</blockquote>
+</div>
+
+<div class="sqlcheat">
+<h4>LIKE</h4>
+<blockquote>-operator that gives you similar values</blockquote>
+<h4>Syntax/Example</h4>
+<blockquote>SELECT * FROM movies</blockquote>
+<blockquote>WHERE name LIKE 'se_en';</blockquote>
+<h4>Notes</h4>
+<blockquote>The '_' is a wildcard character for one character</blockquote>
+</div>
+
+<div class="sqlcheat">
+<h4>%</h4>
+<blockquote>-another wildcard cahracter that matches 0 or more missing characters in a pattern</blockquote>
+<h4>Syntax/Example</h4>
+<blockquote>SELECT * FROM movies</blockquote>
+<blockquote>WHERE name LIKE 'harry potter%";</blockquote>
+<h4>Notes</h4>
+<blockquote>This would return anything that starts with 'harry potter', it doesn't matter what comes after. (ideally it would return all the sequels!)</blockquote>
+</div>
+
+<div class="sqlcheat">
+<h4>BETWEEN</h4>
+<blockquote>-filters the result set within a certain range</blockquote>
+<h4>Syntax</h4>
+<blockquote>SELECT * FROM some_table</blockquote>
+<blockquote>WHERE column_name BETWEEN parameter_1 AND parameter_2;</blockquote>
+<h4>Example</h4>
+<blockquote>SELECT * FROM movies</blockquote>
+<blockquote>WHERE year BETWEEN 1990 AND 2000;</blockquote>
+<blockquote>(or) </blockquote>
+<blockquote>WHERE name BETWEEN 'A' AND 'J';</blockquote>
+</div>
+
+<div class="sqlcheat">
+<h4>AND</h4>
+<blockquote>-used to require multiple conditions</blockquote>
+<h4>Syntax/Example</h4>
+<blockquote>(see above example)</blockquote>
+</div>
+
+<div class="sqlcheat">
+<h4>OR</h4>
+<blockquote>-used to combine multiple conditions</blockquote>
+<h4>Syntax/Example</h4>
+<blockquote>SELECT * FROM movies</blockquote>
+<blockquote>WHERE genre = 'comedy'</blockquote>
+<blockquote>OR year < 1980;</blockquote>
+</div>
+
+<div class="sqlcheat">
+<h4>ORDER BY</h4>
+<blockquote>-sorts the results of queries</blockquote>
+<h4>Syntax</h4>
+<blockquote>SELECT * FROM table_name</blockquote>
+<blockquote>ORDER BY some_column_value direction;</blockquote>
+<h4>Example</h4>
+<blockquote>SELECT * FROM movies</blockquote>
+<blockquote>ORDER BY imdb_rating DESC;</blockquote>
+<h4>Notes</h4>
+<blockquote>DESC = descending order</blockquote>
+<blockquote>ASC = ascending order</blockquote>
+</div>
+
+<div class="sqlcheat">
+<h4>LIMIT</h4>
+<blockquote>-specify the number of rows to be displayed</blockquote>
+<h4>Syntax</h4>
+<blockquote>SELECT * FROM some_table</blockquote>
+<blockquote>WHERE column SOME PARAMETER</blockquote>
+<blockquote>LIMIT some_number;</blockquote>
+<h4>Example</h4>
+<blockquote>SELECT * FROM movies</blockquote>
+<blockquote>WHERE year BETWEEN 1990 AND 2000</blockquote>
+<blockquote>LIMIT 5;</blockquote>
+</div>
+
+</article>
+</body>
+</html>
