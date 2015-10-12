@@ -45,6 +45,13 @@ header nav a:hover {
 
 }
 
+
+.sqlcheat {
+	padding-left: 5px;
+	border:1px solid black;
+
+}
+
 article {
 	padding: 2em;
 	border: solid black 1px;
