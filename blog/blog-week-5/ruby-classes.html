@@ -1,48 +1,75 @@
-<article>
+<!Doctype html>
+<html>
 
-	<h1>if require_brain_fuel? == true</h1>
-	<h3>ruby coffee.rb</h3>
+<head>
+	<link href="../stylesheets/master.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8">
+	<title>George Wambold</title>
+</head>
 
-<p>Relating objects and processes in programming to examples from everyday life can be an excellent teaching tool. In this blog post I'm going to use a Ruby class to model a coffee machine. I think it's a good object to model because it has a couple simple variables and methods. Plus everyone's familiar with coffee machines, chances are you have a cup of coffee infront of you right now!<p>
+<body>
+	<header>
+		<nav>
+			<a class="navigation" href="http://gaw1990.github.io/about/about">About</a>
+			<a class="navigation" href="http://gaw1990.github.io/blog/blog">Blog</a>
+			<a class="navigation" href="http://gaw1990.github.io/index">Home</a>
+			<a class="email" href="mailto:georgewambold@gmail.com">GeorgeWambold@gmail.com</a>	
+		</nav>
+	</header>
 
-<p>The first thing in our CoffeeMachine class would be an initialize method with instance variables for the water level, coffee level and one boolean variable for whether the machine is warmed up. </p>
+	<article>
 
-	<blockquote>class CoffeeMachine</blockquote>
-	<blockquote>def initialize(coffee_beans)</blockquote>
-	<blockquote>@water_level = 0(0-100)</blockquote>
-	<blockquote>@bean_level = coffee_beans_grams)</blockquote>
-	<blockquote>@warmed_up = false</blockquote>
-	<blockquote>end</blockquote>
-	<blockquote>end</blockquote>
+		<h1>if require_brain_fuel? == true</h1>
+		<h3>ruby coffee.rb</h3>
 
-<p>We have our @water_level variable to show us how much water is in the machine, our @bean_level gets it's value from the coffee_beans argument because I imagine we'll want to use the different kinds of coffee on our shelf (we're connoisseurs, after all) and finally our warmed_up variable is a boolean that lets us know if the coffee machine is ready to brew.</p>
+	<p>Relating objects and processes in programming to examples from everyday life can be an excellent teaching tool. In this blog post I'm going to use a Ruby class to model a coffee machine. I think it's a good object to model because it has a couple simple variables and methods. Plus everyone's familiar with coffee machines, chances are you have a cup of coffee infront of you right now!</p>
 
-<p>Now we have our water, beans and heat variables we need some methods to actually make the coffee. The first method will check if we have enough water and beans for the amount of cups (the argument cups) we want and if the machine is warmed up. Something like this:</p>
+	<p>The first thing in our CoffeeMachine class would be an initialize method with instance variables for the water level, coffee level and one boolean variable for whether the machine is warmed up. </p>
+
+		<blockquote>class CoffeeMachine</blockquote>
+		<blockquote>def initialize(coffee_beans)</blockquote>
+		<blockquote>@water_level = 0(0-100)</blockquote>
+		<blockquote>@bean_level = coffee_beans_grams)</blockquote>
+		<blockquote>@warmed_up = false</blockquote>
+		<blockquote>end</blockquote>
+		<blockquote>end</blockquote>
+
+	<p>We have our @water_level variable to show us how much water is in the machine, our @bean_level gets it's value from the coffee_beans argument because I imagine we'll want to use the different kinds of coffee on our shelf (we're connoisseurs, after all) and finally our warmed_up variable is a boolean that lets us know if the coffee machine is ready to brew.</p>
+
+	<p>Now we have our water, beans and heat variables we need some methods to actually make the coffee. The first method will check if we have enough water and beans for the amount of cups (the argument cups) we want and if the machine is warmed up. Something like this:</p>
 
 
-	<blockquote>def ready_to_brew?(cups)</blockquote>
-	<blockquote>if @water_level > (10 * cups) && @bean_level > (10 * cups) && @warmed_up == true</blockquote>
-	<blockquote># if the water level at least 10% per cup wanted, bean level at least 10 grams per cup needed and machine warmed up</blockquote>
-	<blockquote>return true</blockquote>
-	<blockquote>else</blockquote>
-	<blockquote>return false</blockquote>
-	<blockquote>end</blockquote>
+		<blockquote>def ready_to_brew?(cups)</blockquote>
+		<blockquote>if @water_level > (10 * cups) && @bean_level > (10 * cups) && @warmed_up == true</blockquote>
+		<blockquote># if the water level at least 10% per cup wanted, bean level at least 10 grams per cup needed and machine warmed up</blockquote>
+		<blockquote>return true</blockquote>
+		<blockquote>else</blockquote>
+		<blockquote>return false</blockquote>
+		<blockquote>end</blockquote>
 
-<p>So now we have a method to check if the machine is ready to brew, but what if it returns false because there's not enough water?</p>
+	<p>So now we have a method to check if the machine is ready to brew, but what if it returns false because there's not enough water?</p>
 
-	<blockquote>def fill</blockquote>
-	<blockquote>#add water</blockquote>
-	<blockquote>end</blockquote>
+		<blockquote>def fill</blockquote>
+		<blockquote>#add water</blockquote>
+		<blockquote>end</blockquote>
 
-<p>A little fill method should take care of our water (if you have to buy beans that's your responsiblity, not this program's). Now we have all of our ingredients and ready_to_brew? returned true, let's brew up a brew method.</p>
+	<p>A little fill method should take care of our water (if you have to buy beans that's your responsiblity, not this program's). Now we have all of our ingredients and ready_to_brew? returned true, let's brew up a brew method.</p>
 
-	<blockquote>def brew(cups)</blockquote>
-	<blockquote>#coffee + heat + water</blockquote>
-	<blockquote>@water_level = @water_level - (10 * cups)</blockquote>
-	<blockquote>@bean_level = @bean_level - (10 * cups)</blockquote>
-	<blockquote>return #cup_of_cofee</blockquote>
-	<blockquote>end</blockquote>
+		<blockquote>def brew(cups)</blockquote>
+		<blockquote>#coffee + heat + water</blockquote>
+		<blockquote>@water_level = @water_level - (10 * cups)</blockquote>
+		<blockquote>@bean_level = @bean_level - (10 * cups)</blockquote>
+		<blockquote>return #cup_of_cofee</blockquote>
+		<blockquote>end</blockquote>
 
-<p>Awesome! There you go. The beans and water used have been subtracted from their respective variables and the brew method returned us a cup of coffee. Now you can go write some classes of your own with all your new found energy!</p>
+	<p>Awesome! There you go. The beans and water used have been subtracted from their respective variables and the brew method returned us a cup of coffee. Now you can go write some classes of your own with all your new found energy!</p>
 
 	</article>
+
+	<footer>
+		<p>George Wambold is a Web Developer in Chicago, IL. <a href="mailto:georgewambold@gmail.com">Hire him.</a></p>
+	</footer>
+</body>
+</html>
+
