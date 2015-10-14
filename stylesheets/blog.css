@@ -52,6 +52,11 @@ header nav a:hover {
 
 }
 
+.link {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.1em;
+}
+
 article {
 	padding: 2em;
 	border: solid black 1px;
