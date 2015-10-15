@@ -33,6 +33,36 @@ header nav a:hover {
 
 /*-------------------------^Header^--------------------------------*/
 
+.index-jumbo {
+	padding-left: 3em;
+	padding: 1em;
+}
+.index-jumbo h1 {
+	font-size: 2.5em;
+}
+
+.project-container {
+	padding-bottom: 5em;
+	margin-bottom: 6em;
+	margin-top: 2em;
+	text-align: center;
+	display: block;
+	margin: 0;
+	padding:0;
+}
+
+.project {
+	width: 33.3%;
+	margin-right: 3.8%;
+	margin-left: 3.8%;
+	float: left;
+	min-height: 1px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+
 
 /*----------------------blog---------------------*/
 .jumbotron-container {
@@ -110,9 +140,8 @@ header nav a:hover {
 
 footer {
 	text-align: center;
-	margin-top:4em;
+	margin-top:8em;
 	font-size: .9em;
-	bottom: 0;
 	width: 100%;
 }
 
