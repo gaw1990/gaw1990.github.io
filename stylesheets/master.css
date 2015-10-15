@@ -32,11 +32,14 @@ header nav a:hover {
 }
 
 /*-------------------------^Header^--------------------------------*/
+
+
+/*----------------------blog---------------------*/
 .jumbotron-container {
 	
-	margin-bottom: 10%;
+	margin-bottom: 5%;
   	margin-top: 10%;
-  	margin-left: 20%;
+  	margin-left: 18%;
 }
 
 .jumbotron {
@@ -49,10 +52,10 @@ header nav a:hover {
 .rudy {
 	display: inline-block;
 	vertical-align: middle;
-	border-radius: 50%;
-	height: 10em;
+	border-radius: 3%;
+	height: 12em;
 	width: 10em;
-	box-shadow: 0px 0px 5px #888888;
+	box-shadow: 0px 0px 10px #888888;
 }
 
 .article-container {
@@ -72,6 +75,33 @@ header nav a:hover {
 	color: #9F9F9F;
 }
 
+/*------------------------------------------------------------*/
+
+/*-------------------------about------------------------------*/
+
+.bio {
+	border: 0;
+    margin: 1em;
+    outline: 0;
+    padding: 1em;
+    display: block;
+}
+
+.bio h1 {
+	font-size: 1.4em;
+}
+
+.bio li {
+	padding-bottom: 1em;
+}
+
+.jenga {
+	height: 260px;
+	width: 200px;
+    display: inline;
+    float: right;
+    padding: 3em;
+}
 
 /*-------------------------Footer-----------------------------*/
 
@@ -79,6 +109,9 @@ footer {
 	text-align: center;
 	margin-top:4em;
 	font-size: .9em;
+	bottom: 0;
+	width: 100%;
+	position: absolute;
 }
 
 
