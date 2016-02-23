@@ -8,7 +8,7 @@ categories:
 
 Creating space around HTML elements is easy with CSS! Look at this content nested within a box!
 
-![nested content](../../imgs/nested-box.png)
+![nested content](../../../resources/nested-box.png)
 
 Where is the padding, border and margin you ask? You're looking right at them!
 
@@ -20,34 +20,34 @@ Now that we have that down, let's look at how we give elements padding, borders 
 
 As you can see here, our content is surrounded by a black block element:
 
-![content](../../imgs/content-box.png)
+![content](../../../resources/content-box.png)
 
 We don't like the black box being so close to our content, so we're going to add some padding in CSS like this:
 
-![padding in CSS](../../imgs/content-padding-css.png)
+![padding in CSS](../../../resources/content-padding-css.png)
 
 Awesome! Now look at how much space our content has!
 
-![padding](../../imgs/content-padding-pic.png)
+![padding](../../../resources/content-padding-pic.png)
 
 We gave it 100px of padding on every side! That's great, but now let's make it stand out a little more with a bright magenta border!
 
 We add the border property into our CSS file:
 
-![magenta border](../../imgs/magenta-border.png)
+![magenta border](../../../resources/magenta-border.png)
 
 Now our content looks like this:
 
-![magenta border](../../imgs/magenta-ss.png)
+![magenta border](../../../resources/magenta-ss.png)
 
 Which is great.. Except for the fact that our border is WAY too close to the black box element. Lucky for us, we can give the border a little room to breathe with a margin!
 
 In our CSS file we'll add a margin property to our content like this:
 
-![magenta border](../../imgs/margin-css.png)
+![magenta border](../../../resources/margin-css.png)
 
 Now our content is well highlighted and has enough space to breathe!
 
-![magenta border](../../imgs/margin-ss.png)
+![magenta border](../../../resources/margin-ss.png)
 
 Now go out and create some space of your own and never fear spacing properties in CSS again!
