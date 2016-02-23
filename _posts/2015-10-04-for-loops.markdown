@@ -1,0 +1,98 @@
+---
+layout: post
+title:  "For loops in JS and Ruby"
+date:   2015-09-25 14:00:22 -0600
+categories:
+---
+
+# They're fun!
+
+In this blog post I'm going to discuss the differences and similarities between for loops in JavaScript and Ruby. I'm going to explain how they work, their syntaxes and finally how I feel about them.
+
+So since we've been working on Ruby for 7 weeks, let's start with for loops in Ruby. Their syntax looks like this:
+
+``` for some_var in some_range do ```
+
+``` [block of code] ```
+
+``` end ```
+
+Ruby for loops allow us to give a variable, a range in the form of a boolean expression and then pass the variable a block of code for that range and return the result.
+
+Lets give a quick, simple Ruby for loop example:
+
+``` for i in 0..10 do ```
+
+``` puts i ```
+
+``` end ```
+
+``` #=> ```
+
+``` 0 ```
+
+``` 1 ```
+
+``` 2 ```
+
+``` 3 ```
+
+``` 4 ```
+
+``` 5 ```
+
+``` ect.. ```
+
+We're telling Ruby to, for i in 0 to 10, puts i. So for every number between and including 0 and 10, we're excecuting a puts on the number.
+
+Ruby loops are great because their syntax spells out exactly what's going to happen and they handle discreet number ranges well. Though they do require extra code outside of the loop for counter functions where JavaScript for loops don't.
+
+Let's look at some example syntax for JavaScript for loops:
+
+``` for (first_step; some_range; last_step;){ ```
+
+``` [block of code] ```
+
+``` } ```
+
+So we give our loop a variable, a range for that variable and a block of code that will be excecuted at the end of every loop. Just FYI, all of the arguements at the top of JavaScript loops are optional. This makes it easy to do something like this in JavaScript:
+
+``` for (i=0; i <= 10; i++){ ```
+
+``` console.log(i) ```
+
+``` } ```
+
+``` #=> ```
+
+``` 0 ```
+
+``` 1 ```
+
+``` 2 ```
+
+``` 3 ```
+
+``` 4 ```
+
+``` 5 ```
+
+``` ect.. ```
+
+Here we're telling JavaScript to start with i=0, and until i <= 10 returns false, run the code block then 'i++' which increments the value of i up by one.
+
+JavaScript loops are great because we have variable definition and last step built into the syntax. If we wanted to do that same thing in Ruby, it would look like this:
+
+``` counter = 0 ```
+
+``` for i in i <=10 do ```
+
+``` puts i ```
+
+``` counter += 1 ```
+
+``` end ```
+
+See we had to define a counter variable above the code, and increment it with a line in our code block.
+
+While Ruby for loops may be easier to pick up and seem simpler, I think that ultimately JavaScript for loops are more effective and intuitive.
