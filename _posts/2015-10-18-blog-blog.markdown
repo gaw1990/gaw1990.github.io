@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "blog on blogs"
+date:   2015-10-18 14:00:22 -0600
+categories:
+---
+
+Writing this blog has been interesting. There were times I had to write posts and it was the last thing in the world I wanted to do, and other times when I spent hours researching and writing a post and loved it.
+
+The biggest differences were the topic and the timing. When I wrote my encryption blog, it was about something I'm passionate about and spend personal time reading about. It was easy to write and kind of fun. On the other hand I wrote my '.map' and Ruby Classes blog just wrote because I had to. I also saved most of my blog writing until the end of the week, so that didn't help.
+
+I may continue blogging about stuff I enjoy during DBC. I think that will keep my content high quality and thorough. Or maybe I won't keep going, I wrote for newspapers for a few years and I never really liked writing.
