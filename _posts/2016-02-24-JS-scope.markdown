@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "JavaScript Block Scope"
+date:   2016-02-24 14:00:22 -0600
+categories: javascript 
+---
+
+This is the first in a series of short blog posts I'm planning on writing. The blog series will cover simple concepts in JavaScipt and will focus on paradigms that I missed my first time around. 
+
+I will write on the concept, find one of my peices of JavaScript code violates the concept and refactor it.
+
+# Scope 
+
+My favorite description of scope on [Wikipedia(Scope)](https://en.wikipedia.org/wiki/Scope_(computer_science)) is:
+>  The term "scope" is also used to refer to the set of all entities that are visible or names that are valid within a portion of the program or at a given point in a program
+The word 'visible' seems very relevant, scope can be thought of as which variables/functions a part of the code can see and access. 
+
+# Scope in JavaScript functions
+
+When a function is called in JavaScript, a new scope is created for that function. Variable names that exist in the global scope can be overwritten within the function's scope without worry. 
+
+![Function Scope](../../../resources/function-scope-2016-02-24.png)
+
+Reassigning 'var a' within the function doesn't effect 'a' in the global scope.
+
+# Scope in JavaScript blocks
+
+A block according to [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block): 
+
+>A block statement is used to group zero or more statements. The block is delimited by a pair of curly brackets.
+
+When a block is created in JavaScript, NO NEW SCOPE IS CREATED. The code within the block is excecuted in the global scope. For example:
+
+![Block Scope](../../../resources/block-scope-2016-02-24.png)
+
+Reassigning 'var a' within the block changes it's value in the global scope, so that even after the block ends, the variable 'a' keeps it's new value 'local scope'. 
+
+# Why is this?
+
+Well according to [a tweet by Brandon Eich](https://twitter.com/brendaneich/status/349768501583548416), JavaScript's creator:
+
+>10 days did not leave time for block scope. Also many "scripting languages" of that mid-90s era had few scopes & grew more later.
+
+So, he didn't have enough time to create block scope? I guess so. What issues does this leave us with? 
+
+Practically, it makes it easy to accidentially overwrite variables in the global scope (especially if you come from a language with implicit block scope like Ruby).
+
+Design wise, it forces us to define all variales that we want in the block at the top of the block's parent scope. This practice, although sound within JS, exposes those variables to portions of code that don't need to know them. Violating the [Princible of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege). 
+
+# Refactor
+
+I couldn't find anything in my code that directly violated scoping rules. 
